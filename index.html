@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Image</title>
+    <style>
+        body {
+            background-color: black;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            animation: zoom 10s infinite alternate;
+        }
+        @keyframes zoom {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:white;">Random Image</h1>
+    <img src="{{ url_for('static', filename=random_image) }}" alt="Random Image">
+</body>
+</html>
